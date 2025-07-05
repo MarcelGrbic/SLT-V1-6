@@ -79,9 +79,11 @@ public class TicTacToe {
         return false;
     }
 
-    // Main-Methode zum Starten
-    public static void main(String[] args) {
-        TicTacToe game = new TicTacToe();
-        game.start();
+
+    public Board getBoard(){
+        return board;
+    }
+    public Player getCurrentPlayer(){
+        return currentPlayer;
     }
 }

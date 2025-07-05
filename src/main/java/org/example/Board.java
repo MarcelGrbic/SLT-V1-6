@@ -19,6 +19,9 @@ public class Board {
         return cells[x][y] == ' ';
     }
     public void place(int x, int y, char marker){
+        if (!isCellEmpty(x,y)){
+            throw new IllegalArgumentException("Cell is already occupied!");
+        }
         cells[x][y]=marker;
     }
     public boolean isFull(){
